@@ -13,21 +13,37 @@ use MooseX::Types::Moose qw(Int);
 subtype PortNumber,
     as Int,
     where { $_ >= 0 && $_ <= 65535 },
+    inline_as {
+    $_[0]->parent()->_inline_check( $_[1] )
+        . " && ( $_[1] >= 0 && $_[1] <= 65535 ) "
+    },
     message {'Ports are those from 0 through 65535'};
 
 subtype PortWellKnow,
     as Int,
     where { $_ >= 0 && $_ <= 1023 },
+    inline_as {
+    $_[0]->parent()->_inline_check( $_[1] )
+        . " && ( $_[1] >= 0 && $_[1] <= 1023 ) "
+    },
     message {'The Well Known Ports are those from 0 through 1023.'};
 
 subtype PortRegistered,
     as Int,
     where { $_ >= 1024 && $_ <= 49151 },
+    inline_as {
+    $_[0]->parent()->_inline_check( $_[1] )
+        . " && ( $_[1] >= 1024 && $_[1] <= 49151 ) "
+    },
     message {'The Registered Ports are those from 1024 through 49151'};
 
 subtype PortPrivate,
     as Int,
     where { $_ >= 49152 && $_ <= 65535 },
+    inline_as {
+    $_[0]->parent()->_inline_check( $_[1] )
+        . " && ( $_[1] >= 49152 && $_[1] <= 65535 ) "
+    },
     message {
     'The Dynamic and/or Private Ports are those from 49152 through 65535'
     };
