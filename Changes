@@ -1,5 +1,7 @@
 {{$NEXT}}
 
+0.03     2016-08-31
+
 - Fixed $VERSION to actually match distribution. RT #97634.
 
 - Added inlining for all types.

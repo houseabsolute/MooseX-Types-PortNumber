@@ -87,7 +87,7 @@ Once installed, here are some dzil commands you might try:
 
 You can learn more about Dist::Zilla at http://dzil.org/.
 
-The code for this distribution is [hosted at GitHub](https://github.com/autarch/MooseX-Types-PortNumber).
+The code for this distribution is [hosted at GitHub](https://github.com/houseabsolute/MooseX-Types-PortNumber).
 
 You can submit code changes by forking the repository, pushing your code
 changes to your clone, and then submitting a pull request. Detailed
@@ -100,6 +100,11 @@ can submit an issue report [via the web](http://rt.cpan.org/Public/Dist/Display.
 or [via email](bug-moosex-types-portnumber@rt.cpan.org.
 This is a good place to send your questions about the usage of this distribution.
 
+## Travis
+
+All pull requests for this distribution will be automatically tested by
+[Travis](https://travis-ci.org/) and the build status will be reported on the
+pull request page. If your build fails, please take a look at the output.
 
 ## Tidyall
 
